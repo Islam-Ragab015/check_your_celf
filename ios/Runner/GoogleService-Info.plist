@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>176956706270-8tu2go5bh7upg24j6rdtacelqn89mjbs.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.176956706270-8tu2go5bh7upg24j6rdtacelqn89mjbs</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBGD9OTjbFn07ILg7hfoq5buvAw8UkDSFU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>176956706270</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.diseasesChecker</string>
+	<key>PROJECT_ID</key>
+	<string>my-first-check-a56cd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>my-first-check-a56cd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:176956706270:ios:05bbfa7ab0ecdfc763a14f</string>
+</dict>
+</plist>
