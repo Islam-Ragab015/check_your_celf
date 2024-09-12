@@ -2,6 +2,7 @@
 
 import 'package:diseases_checker/moduls/check/specific_check/SpecificHealthCheckForm.dart';
 import 'package:diseases_checker/moduls/check/specific_check/symptoms/Migraine/frequency.dart';
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class MigraineDuration extends StatefulWidget {
@@ -157,7 +158,8 @@ class _MigraineDurationState extends State<MigraineDuration> {
                       height: 60,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          // final glucoseLevel = _glucoseController.text;
+                          BspcList.clear();
+                          BspcList.add(SpcList(name: 'Duration', value: _selectedDuration.toString() ));
 
                           Navigator.push(
                               context,

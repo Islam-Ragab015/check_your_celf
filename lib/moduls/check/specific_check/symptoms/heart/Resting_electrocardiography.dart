@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:diseases_checker/moduls/check/specific_check/symptoms/heart/max_heart_rate.dart';
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class RestingElectrocardiography extends StatefulWidget {
@@ -15,6 +16,7 @@ class RestingElectrocardiographyState
     extends State<RestingElectrocardiography> {
   final _formKey = GlobalKey<FormState>();
   String? restingElectrocardiography;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -129,6 +131,9 @@ class RestingElectrocardiographyState
                       height: 60,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
+                          BspcList.add(SpcList(
+                              name: 'rest ECG',
+                              value: restingElectrocardiography.toString()));
                           Navigator.push(
                               context,
                               MaterialPageRoute(

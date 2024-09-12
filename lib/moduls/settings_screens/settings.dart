@@ -7,7 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 
 class SettingsPage extends StatefulWidget {
-  const SettingsPage({Key? key}) : super(key: key);
+  const SettingsPage({super.key});
 
   @override
   _SettingsPageState createState() => _SettingsPageState();
@@ -74,16 +74,16 @@ class _SettingsPageState extends State<SettingsPage> {
                     init: AppLangauge(),
                     builder: (controller) {
                       return DropdownButton(
-                        items: [
+                        items: const [
                           DropdownMenuItem(
                             value: 'en',
                             child: Row(
-                              children: const [
+                              children: [
                                 Text("English"),
                               ],
                             ),
                           ),
-                          const DropdownMenuItem(
+                          DropdownMenuItem(
                               value: 'ar', child: Text("العَرَبِيَّةِ"))
                         ],
                         value: controller.appLocale,

@@ -100,7 +100,7 @@ List<Message> messages = [
     sender: james,
     time: '5:30 PM',
     text:
-        'Of course, let\s get those tests done as soon as possible. We want to make sure that we catch any potential issues early.',
+        'Of course, lets get those tests done as soon as possible. We want to make sure that we catch any potential issues early.',
     isLiked: true,
     unread: true,
   ),

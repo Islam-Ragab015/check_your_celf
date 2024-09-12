@@ -2,6 +2,7 @@
 
 import 'package:diseases_checker/moduls/check/specific_check/SpecificHealthCheckForm.dart';
 import 'package:diseases_checker/moduls/check/specific_check/symptoms/heart/resting_blood_pressure.dart';
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class Chest_Pain_Type extends StatefulWidget {
@@ -16,7 +17,7 @@ class _Chest_Pain_TypeState extends State<Chest_Pain_Type> {
   final _formKey = GlobalKey<FormState>();
 
   // ignore: non_constant_identifier_names
-  double? Chest_Pain_Type;
+  String? Chest_Pain_Type;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -140,7 +141,9 @@ class _Chest_Pain_TypeState extends State<Chest_Pain_Type> {
                             ),
                           ],
                           onChanged: (String? value) {
-                            setState(() {});
+                            setState(() {
+                              Chest_Pain_Type = value;
+                            });
                           },
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -165,6 +168,8 @@ class _Chest_Pain_TypeState extends State<Chest_Pain_Type> {
                       height: 60,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
+                          BspcList.clear();
+                          BspcList.add(SpcList(name: 'Angina', value: Chest_Pain_Type.toString() ));
                           Navigator.push(
                               context,
                               MaterialPageRoute(

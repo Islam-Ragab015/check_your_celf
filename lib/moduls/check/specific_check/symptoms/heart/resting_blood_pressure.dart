@@ -1,6 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'package:diseases_checker/moduls/check/specific_check/symptoms/heart/Cholesterol.dart';
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class RestingBloodPressure extends StatefulWidget {
@@ -12,6 +13,8 @@ class RestingBloodPressure extends StatefulWidget {
 
 class _RestingBloodPressureState extends State<RestingBloodPressure> {
   final _formKey = GlobalKey<FormState>();
+  String? _RBP;
+
   TextEditingController rbpController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -101,7 +104,9 @@ class _RestingBloodPressureState extends State<RestingBloodPressure> {
                             ),
                           ],
                           onChanged: (String? value) {
-                            setState(() {});
+                            setState(() {
+                              _RBP = value;
+                            });
                           },
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -126,7 +131,7 @@ class _RestingBloodPressureState extends State<RestingBloodPressure> {
                       height: 60,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          // final glucoseLevel = _glucoseController.text;
+                          BspcList.add(SpcList(name: 'RBP', value: _RBP.toString() ));
 
                           Navigator.push(
                               context,

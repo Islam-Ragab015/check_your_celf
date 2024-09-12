@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:diseases_checker/moduls/authentication/login/login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -7,6 +8,17 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const colorizeColors = [
+      Colors.purple,
+      Colors.blue,
+      Colors.yellow,
+      Colors.red,
+    ];
+
+    const colorizeTextStyle = TextStyle(
+      fontSize: 30.0,
+      fontFamily: 'Horizon',
+    );
     return SafeArea(
       child: Scaffold(
         body: Padding(
@@ -28,14 +40,31 @@ class WelcomeScreen extends StatelessWidget {
                   height: 150,
                 ),
                 const SizedBox(height: 20),
-                Text(
-                  'Welcome'.tr,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
+                // Text(
+                //   'Welcome'.tr,
+                //   style: const TextStyle(
+                //     color: Colors.white,
+                //     fontSize: 30,
+                //     fontWeight: FontWeight.bold,
+                //   ),
+                // ),
+
+                SizedBox(
+                  width: 250.0,
+                  child: AnimatedTextKit(
+                    repeatForever: true,
+                    animatedTexts: [
+                      ColorizeAnimatedText(
+                        'Welcome',
+                        textAlign: TextAlign.center,
+                        textStyle: colorizeTextStyle,
+                        colors: colorizeColors,
+                      ),
+                    ],
+                    isRepeatingAnimation: true,
                   ),
                 ),
+
                 const SizedBox(height: 10),
                 const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10),
@@ -47,27 +76,51 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 50),
-                MaterialButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const Login(),
-                        ));
-                  },
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
+                // MaterialButton(
+                //   onPressed: () {
+                //     Navigator.push(
+                //         context,
+                //         MaterialPageRoute(
+                //           builder: (context) => const Login(),
+                //         ));
+                //   },
+                //   color: Colors.white,
+                //   shape: RoundedRectangleBorder(
+                //     borderRadius: BorderRadius.circular(30),
+                //   ),
+                //   padding:
+                //       const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                //   child: Text(
+                //     'Get Started'.tr,
+                //     style: TextStyle(
+                //       color: Colors.blue[900],
+                //       fontSize: 18,
+                //       fontWeight: FontWeight.bold,
+                //     ),
+                //   ),
+                // ),
+                DefaultTextStyle(
+                  style: const TextStyle(
+                    fontSize: 20.0,
                   ),
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
-                  child: Text(
-                    'Get Started'.tr,
-                    style: TextStyle(
-                      color: Colors.blue[900],
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  child: AnimatedTextKit(
+                    animatedTexts: [
+                      WavyAnimatedText('Get Started'.tr,
+                          textStyle: TextStyle(
+                            color: Colors.blue[900],
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                          )),
+                    ],
+                    isRepeatingAnimation: true,
+                    repeatForever: true,
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Login(),
+                          ));
+                    },
                   ),
                 ),
               ],

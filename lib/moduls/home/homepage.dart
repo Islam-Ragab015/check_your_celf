@@ -1,5 +1,6 @@
 // ignore_for_file: use_build_context_synchronously
 
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:diseases_checker/moduls/appbar_screan/about_us_screen.dart';
 import 'package:diseases_checker/moduls/appbar_screan/give_feedback_screen.dart';
@@ -289,14 +290,42 @@ class _HomePageState extends State<HomePage> {
                                                     size: 32,
                                                     color: Colors.orange,
                                                   ),
-                                                  Text(
-                                                    "General Diseases Check".tr,
-                                                    textAlign: TextAlign.center,
+                                                  // Text(
+                                                  //   "General Diseases Check".tr,
+                                                  //   textAlign: TextAlign.center,
+                                                  //   style: const TextStyle(
+                                                  //     color: Colors.orange,
+                                                  //     fontWeight:
+                                                  //         FontWeight.bold,
+                                                  //     fontSize: 18,
+                                                  //   ),
+                                                  // ),
+                                                  DefaultTextStyle(
                                                     style: const TextStyle(
+                                                      fontSize: 22.0,
+                                                      fontFamily: 'Agne',
                                                       color: Colors.orange,
                                                       fontWeight:
                                                           FontWeight.bold,
-                                                      fontSize: 18,
+                                                    ),
+                                                    child: AnimatedTextKit(
+                                                      animatedTexts: [
+                                                        TypewriterAnimatedText(
+                                                          'General Diseases Check'
+                                                              .tr,
+                                                          textAlign:
+                                                              TextAlign.center,
+                                                        ),
+                                                      ],
+                                                      repeatForever: true,
+                                                      onTap: () {
+                                                        Navigator.push(
+                                                            context,
+                                                            MaterialPageRoute(
+                                                              builder: (context) =>
+                                                                  const GeneralHealthCheckForm(),
+                                                            ));
+                                                      },
                                                     ),
                                                   ),
                                                 ],
@@ -346,15 +375,43 @@ class _HomePageState extends State<HomePage> {
                                                     size: 32,
                                                     color: Colors.orange,
                                                   ),
-                                                  Text(
-                                                    "Specific Diseases Check"
-                                                        .tr,
-                                                    textAlign: TextAlign.center,
+                                                  // Text(
+                                                  //   "Specific Diseases Check"
+                                                  //       .tr,
+                                                  //   textAlign: TextAlign.center,
+                                                  //   style: const TextStyle(
+                                                  //     color: Colors.orange,
+                                                  //     fontWeight:
+                                                  //         FontWeight.bold,
+                                                  //     fontSize: 18,
+                                                  //   ),
+                                                  // ),
+                                                  DefaultTextStyle(
                                                     style: const TextStyle(
+                                                      fontSize: 22.0,
+                                                      fontFamily: 'Agne',
                                                       color: Colors.orange,
                                                       fontWeight:
                                                           FontWeight.bold,
-                                                      fontSize: 18,
+                                                    ),
+                                                    child: AnimatedTextKit(
+                                                      animatedTexts: [
+                                                        TypewriterAnimatedText(
+                                                          'Specific Diseases Check'
+                                                              .tr,
+                                                          textAlign:
+                                                              TextAlign.center,
+                                                        ),
+                                                      ],
+                                                      repeatForever: true,
+                                                      onTap: () {
+                                                        Navigator.push(
+                                                            context,
+                                                            MaterialPageRoute(
+                                                              builder: (context) =>
+                                                                  const HealthCheckScreen(),
+                                                            ));
+                                                      },
                                                     ),
                                                   ),
                                                 ],
@@ -385,6 +442,7 @@ class _HomePageState extends State<HomePage> {
 // Define a widget with const constructor
 class MyWidget extends StatelessWidget {
   const MyWidget({
+    super.key,
     required this.email,
     required this.displayName,
     required this.photoURL,

@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, library_private_types_in_public_api
 
 import 'package:diseases_checker/moduls/check/specific_check/symptoms/heart/exercise-induced%20angina.dart';
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class MaxHeartRate extends StatefulWidget {
@@ -133,7 +134,7 @@ class _MaxHeartRateState extends State<MaxHeartRate> {
                       height: 60,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          // final glucoseLevel = _glucoseController.text;
+                          BspcList.add(SpcList(name: 'Max Heart Rate', value: _selectedMaxHeartRate.toString() ));
 
                           Navigator.push(
                               context,

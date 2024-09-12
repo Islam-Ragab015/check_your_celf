@@ -1,5 +1,6 @@
 // ignore_for_file: non_constant_identifier_names, library_private_types_in_public_api
 
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 import 'Visual.dart';
@@ -130,7 +131,7 @@ class _PhonophobiaState extends State<Phonophobia> {
                         height: 65,
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
-                            // final glucoseLevel = _glucoseController.text;
+                            BspcList.add(SpcList(name: 'Phonophobia', value: _phonophobiaValue.toString() ));
 
                             Navigator.push(
                                 context,

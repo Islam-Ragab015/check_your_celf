@@ -1,6 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'package:diseases_checker/moduls/check/specific_check/symptoms/stroke/Residence.dart';
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class WorkType extends StatefulWidget {
@@ -135,6 +136,7 @@ class _WorkTypeState extends State<WorkType> {
                       height: 60,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
+                          BspcList.add(SpcList(name: 'Work Type', value: _selectedWorkType.toString() ));
                           Navigator.push(
                               context,
                               MaterialPageRoute(

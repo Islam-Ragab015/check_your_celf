@@ -22,3 +22,14 @@ const kMessageContainerDecoration = BoxDecoration(
 
 String? _email;
 String? _password;
+
+
+class SpcList{
+  final String name;
+  final String value;
+
+
+  SpcList({required this.name, required this.value});
+}
+
+List<SpcList> BspcList = [];

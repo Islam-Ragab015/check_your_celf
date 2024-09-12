@@ -205,7 +205,7 @@ class _GeneralState extends State<General> {
           controller: pageController,
         ),
       ),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
     );
   }
 }

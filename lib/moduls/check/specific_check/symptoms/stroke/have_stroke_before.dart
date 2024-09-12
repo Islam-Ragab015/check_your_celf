@@ -1,6 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'package:diseases_checker/moduls/check/specific_check/symptoms/stroke/result_page.dart';
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class HaveStrokeBefore extends StatefulWidget {
@@ -131,6 +132,7 @@ class _HaveStrokeBeforeState extends State<HaveStrokeBefore> {
                       height: 60,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
+                          BspcList.add(SpcList(name: 'had Stroke Before!', value: hasFastingBloodSugar! ? 'Yes' : 'No' ));
                           Navigator.push(
                               context,
                               MaterialPageRoute(

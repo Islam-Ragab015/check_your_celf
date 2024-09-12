@@ -1,6 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api, non_constant_identifier_names
 
 import 'package:diseases_checker/moduls/check/specific_check/symptoms/Migraine/Dysarthria.dart';
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class Dysphasia extends StatefulWidget {
@@ -128,7 +129,7 @@ class _DysphasiaState extends State<Dysphasia> {
                       height: 65,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          // final glucoseLevel = _glucoseController.text;
+                          BspcList.add(SpcList(name: 'Dysphasia', value: _DysphasiaValue.toString() ));
 
                           Navigator.push(
                               context,

@@ -1,6 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'package:diseases_checker/moduls/check/specific_check/symptoms/heart/Resting_electrocardiography.dart';
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class FastingBloodSugar extends StatefulWidget {
@@ -127,6 +128,8 @@ class _FastingBloodSugarState extends State<FastingBloodSugar> {
                       height: 60,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
+                          BspcList.add(SpcList(name: 'Fasting Blood Sugar', value: fastingBloodSugar.toString() ));
+
                           Navigator.push(
                               context,
                               MaterialPageRoute(

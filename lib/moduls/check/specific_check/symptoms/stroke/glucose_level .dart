@@ -1,6 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'package:diseases_checker/moduls/check/specific_check/symptoms/stroke/BMI.dart';
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class GlucoseLevel extends StatefulWidget {
@@ -129,7 +130,8 @@ class _GlucoseLevelState extends State<GlucoseLevel> {
                       height: 60,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          // final glucoseLevel = _glucoseController.text;
+                          BspcList.add(SpcList(name: 'Glucose Level', value: _selectedGlucoseLevel.toString() ));
+
 
                           Navigator.push(
                               context,

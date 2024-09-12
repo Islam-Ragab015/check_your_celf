@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, library_private_types_in_public_api
 
 import 'package:diseases_checker/moduls/check/specific_check/symptoms/Migraine/Sensory.dart';
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class Visual extends StatefulWidget {
@@ -149,7 +150,7 @@ class _VisualState extends State<Visual> {
                       height: 65,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          // final glucoseLevel = _glucoseController.text;
+                          BspcList.add(SpcList(name: 'Visual', value: _selectedNumberOfSymptoms.toString() ));
 
                           Navigator.push(
                               context,

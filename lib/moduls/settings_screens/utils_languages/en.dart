@@ -160,11 +160,11 @@ const Map<String, String> en = {
   "El-minya": "El-minya",
   "Egypt": "Egypt",
   "Share the App with a Friend!": "Share the App with a Friend!",
-  "Friend\'s Name": "Friend\'s Name",
-  "Please enter your friend\'s name": "Please enter your friend\'s name",
-  "Friend\'s Email": "Friend\'s Email",
-  "Please enter your friend\'s email address":
-      "Please enter your friend\'s email address",
+  "Friend's Name": "Friend's Name",
+  "Please enter your friend's name": "Please enter your friend's name",
+  "Friend's Email": "Friend's Email",
+  "Please enter your friend's email address":
+      "Please enter your friend's email address",
   "Please enter a valid email address": "Please enter a valid email address",
   "Your message has been sent.": "Your message has been sent.",
   "Current User": "Current User",

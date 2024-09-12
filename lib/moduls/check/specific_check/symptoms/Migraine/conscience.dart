@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types, library_private_types_in_public_api
 
 import 'package:diseases_checker/moduls/check/specific_check/symptoms/Migraine/Paresthesia.dart';
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class conscience extends StatefulWidget {
@@ -128,7 +129,7 @@ class _conscienceState extends State<conscience> {
                       height: 65,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          // final glucoseLevel = _glucoseController.text;
+                          BspcList.add(SpcList(name: 'Conscience', value: _conscienceValue.toString() ));
 
                           Navigator.push(
                               context,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class AboutUsPage extends StatelessWidget {
-  const AboutUsPage({Key? key}) : super(key: key);
+  const AboutUsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -50,11 +50,7 @@ class AboutUsPage extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             // mohamed ashraf
-            buildTeamMember(
-              context: context,
-              name: 'Mohamed Ashraf',
-              position: 'Machine Learning Engineer',
-            ),
+
             buildTeamMember(
               context: context,
               name: 'Ahmed Ibrahem',
@@ -62,8 +58,13 @@ class AboutUsPage extends StatelessWidget {
             ),
             buildTeamMember(
               context: context,
-              name: 'Islam Rifaiy',
+              name: 'Islam Mahmoud',
               position: 'Back-End Developer',
+            ),
+            buildTeamMember(
+              context: context,
+              name: 'Mohamed Ashraf',
+              position: 'Machine Learning Engineer',
             ),
             // Zeyad Hamada
             buildTeamMember(
@@ -79,7 +80,7 @@ class AboutUsPage extends StatelessWidget {
             buildTeamMember(
               context: context,
               name: 'Islam Elsherif',
-              position: 'Mobile App and UI Dev',
+              position: 'Mobile App and UI & UX Dev',
             ),
           ],
         ),

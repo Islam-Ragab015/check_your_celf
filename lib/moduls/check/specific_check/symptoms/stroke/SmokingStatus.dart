@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, library_private_types_in_public_api
 
 import 'package:diseases_checker/moduls/check/specific_check/symptoms/stroke/have_stroke_before.dart';
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class SmokingStatus extends StatefulWidget {
@@ -13,7 +14,7 @@ class SmokingStatus extends StatefulWidget {
 class _SmokingStatusState extends State<SmokingStatus> {
   final _formKey = GlobalKey<FormState>();
 
-  double? SmokingStatus;
+  String? SmokingStatus;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -106,7 +107,9 @@ class _SmokingStatusState extends State<SmokingStatus> {
                             ),
                           ],
                           onChanged: (String? value) {
-                            setState(() {});
+                            setState(() {
+                              SmokingStatus = value;
+                            });
                           },
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -131,6 +134,7 @@ class _SmokingStatusState extends State<SmokingStatus> {
                       height: 60,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
+                          BspcList.add(SpcList(name: 'Smoking Status', value: SmokingStatus.toString() ));
                           Navigator.push(
                               context,
                               MaterialPageRoute(

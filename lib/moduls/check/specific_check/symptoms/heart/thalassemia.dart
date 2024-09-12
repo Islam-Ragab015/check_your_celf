@@ -1,4 +1,5 @@
 import 'package:diseases_checker/moduls/check/specific_check/symptoms/heart/result_page.dart';
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class Thalassemia extends StatefulWidget {
@@ -127,6 +128,8 @@ class ThalassemiaState extends State<Thalassemia> {
                       height: 60,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
+                          BspcList.add(SpcList(name: 'Thalassemia', value: _selectedThalassemia.toString() ));
+
                           Navigator.push(
                               context,
                               MaterialPageRoute(

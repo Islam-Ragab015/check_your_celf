@@ -28,14 +28,15 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  animated_text_kit: ^4.2.2
   awesome_dialog: ^3.0.2
   bloc: ^8.1.1
   cached_network_image: ^3.2.3
   cupertino_icons: ^1.0.2
   dio: ^5.1.2
   dropdown_search: ^5.0.6
-  firebase_auth: ^4.6.0
-  firebase_core: ^2.12.0
+  firebase_auth: ^5.2.1
+  firebase_core: ^3.4.1
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.2
@@ -43,18 +44,18 @@ dependencies:
   get_storage: ^2.1.1
   google_sign_in: ^6.1.0
   hydrated_bloc: ^9.1.0
-  intl: ^0.18.1
+  image_picker: ^1.1.2
+  intl: ^0.19.0
   localization: ^2.1.0
-  modal_progress_hud_nsn: ^0.4.0
+  modal_progress_hud_nsn: ^0.5.1
   path_provider: ^2.0.15
+  percent_indicator: ^4.2.3
   shared_preferences: ^2.1.1
   shared_preferences_android: ^2.1.4
   url_launcher: ^6.1.11
-  percent_indicator: ^4.2.3
-
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1
-  flutter_lints: ^2.0.0
+  flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter
 

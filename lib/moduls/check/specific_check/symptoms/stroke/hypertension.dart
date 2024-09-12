@@ -2,6 +2,7 @@
 
 import 'package:diseases_checker/moduls/check/specific_check/SpecificHealthCheckForm.dart';
 import 'package:diseases_checker/moduls/check/specific_check/symptoms/stroke/heart_diseases.dart';
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class Hypertension extends StatefulWidget {
@@ -159,6 +160,8 @@ class _HypertensionState extends State<Hypertension> {
                       height: 60,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
+                          BspcList.clear();
+                          BspcList.add(SpcList(name: 'Hypertension', value: hasFastingBloodSugar! ? 'Yes' : 'No' ));
                           Navigator.push(
                               context,
                               MaterialPageRoute(

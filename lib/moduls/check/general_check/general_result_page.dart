@@ -5,11 +5,11 @@ import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class GeneralResultsPage extends StatelessWidget {
-  const GeneralResultsPage({Key? key}) : super(key: key);
+  const GeneralResultsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final _url = Uri.parse("https://en.wikipedia.org/wiki/Stroke");
+    final url = Uri.parse("https://en.wikipedia.org/wiki/Stroke");
     return Scaffold(
       appBar: AppBar(
         title: const Text('Results'),
@@ -37,8 +37,8 @@ class GeneralResultsPage extends StatelessWidget {
                       fontSize: 15),
                 ),
                 onPressed: () async {
-                  if (await canLaunchUrl(_url)) {
-                    await launchUrl(_url, mode: LaunchMode.externalApplication);
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url, mode: LaunchMode.externalApplication);
                   }
                 },
               ),

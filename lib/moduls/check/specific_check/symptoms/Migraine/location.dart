@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, library_private_types_in_public_api
 
 import 'package:diseases_checker/moduls/check/specific_check/symptoms/Migraine/character.dart';
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class MigraineLocation extends StatefulWidget {
@@ -125,7 +126,7 @@ class _MigraineLocationState extends State<MigraineLocation> {
                       height: 60,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          // final glucoseLevel = _glucoseController.text;
+                          BspcList.add(SpcList(name: 'Location', value: _painLocation.toString() ));
 
                           Navigator.push(
                               context,

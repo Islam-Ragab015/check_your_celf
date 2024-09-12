@@ -23,7 +23,7 @@
   </intent>
    </queries>
    <application
-        android:label="diseases_checker"
+        android:label="Diseases Checker"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity

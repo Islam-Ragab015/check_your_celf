@@ -1,6 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'package:diseases_checker/moduls/check/specific_check/symptoms/stroke/Work_Type.dart';
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class HeartDiseases extends StatefulWidget {
@@ -131,6 +132,7 @@ class _HeartDiseasesState extends State<HeartDiseases> {
                       height: 60,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
+                          BspcList.add(SpcList(name: 'Heart Diseases', value: hasFastingBloodSugar! ? 'Yes' : 'No' ));
                           Navigator.push(
                               context,
                               MaterialPageRoute(

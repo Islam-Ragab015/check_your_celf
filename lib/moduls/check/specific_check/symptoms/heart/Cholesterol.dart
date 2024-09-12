@@ -1,6 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api, file_names
 
 import 'package:diseases_checker/moduls/check/specific_check/symptoms/heart/fasting_blood_sugar.dart';
+import 'package:diseases_checker/shared/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class Cholesterol extends StatefulWidget {
@@ -13,6 +14,7 @@ class Cholesterol extends StatefulWidget {
 class _CholesterolState extends State<Cholesterol> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController cholesterolController = TextEditingController();
+  String? _Cholesterol;
 
   @override
   Widget build(BuildContext context) {
@@ -106,7 +108,9 @@ class _CholesterolState extends State<Cholesterol> {
                             ),
                           ],
                           onChanged: (String? value) {
-                            setState(() {});
+                            setState(() {
+                              _Cholesterol = value;
+                            });
                           },
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -131,7 +135,7 @@ class _CholesterolState extends State<Cholesterol> {
                       height: 60,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          // final glucoseLevel = _glucoseController.text;
+                          BspcList.add(SpcList(name: 'Cholesterol', value: _Cholesterol.toString() ));
 
                           Navigator.push(
                               context,

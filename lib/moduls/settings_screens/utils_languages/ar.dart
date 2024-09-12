@@ -160,10 +160,10 @@ const Map<String, String> ar = {
   "El-minya": "المنيا",
   "Egypt": "مصر",
   "Share the App with a Friend!": "شارك التطبيق مع صديق",
-  "Friend\'s Name": "اسم الصديق",
-  "Please enter your friend\'s name": "الرجاء إدخال اسم صديقك",
-  "Friend\'s Email": "البريد الإلكتروني للصديق",
-  "Please enter your friend\'s email address":
+  "Friend's Name": "اسم الصديق",
+  "Please enter your friend's name": "الرجاء إدخال اسم صديقك",
+  "Friend's Email": "البريد الإلكتروني للصديق",
+  "Please enter your friend's email address":
       "الرجاء إدخال عنوان البريد الإلكتروني لصديقك",
   "Please enter a valid email address": "يرجى إدخال عنوان بريد إلكتروني صالح",
   "Your message has been sent.": "تم ارسال رسالتك",
