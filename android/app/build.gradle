@@ -1,15 +1,19 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+    id 'com.google.gms.google-services' 
+
+}
+
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
     localPropertiesFile.withReader('UTF-8') { reader ->
-        localProperties.load(reader)
-    }
+    localProperties.load(reader)
+}
 }
 
-def flutterRoot = localProperties.getProperty('flutter.sdk')
-if (flutterRoot == null) {
-    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
-}
 
 def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
 if (flutterVersionCode == null) {
@@ -21,45 +25,34 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
-apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
-apply plugin: 'kotlin-android'
-apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
     compileSdkVersion flutter.compileSdkVersion
-    ndkVersion flutter.ndkVersion
+    ndkVersion = "25.1.8937393"
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
+sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+}
 
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
+lintOptions {
+    disable 'InvalidPackage'
+}
 
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-    }
+defaultConfig {
+    // TODO: Specify your own unique Application ID 
+    // (https://developer.android.com/studio/build/application-id.html).
+    applicationId "com.example.diseases_checker"
+    minSdkVersion 23  
+    targetSdkVersion flutter.targetSdkVersion
+    versionCode flutterVersionCode.toInteger()
+    versionName flutterVersionName
+}
 
-    defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.diseases_checker"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdkVersion flutter.minSdkVersion
-        targetSdkVersion flutter.targetSdkVersion
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
-        multiDexEnabled true
-    }
-
-    buildTypes {
-        release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig signingConfigs.debug
+buildTypes {
+    release {
+        // TODO: Add your own signing config for the release build.
+        // Signing with the debug keys for now, so `flutter run --release` works.
+        signingConfig signingConfigs.debug
         }
     }
 }
@@ -68,8 +61,12 @@ flutter {
     source '../..'
 }
 
+// See the updated portion of the answer if you're using a more recent version of Flutter and Dart.
+
 dependencies {
-    implementation platform('com.google.firebase:firebase-bom:32.0.0')
-    implementation 'com.google.android.gms:play-services-location:21.0.1'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // Eliminate this line (or the entire dependencies block)
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20"
 }
+
+// Apply the Google services plugin at the bottom
+apply plugin: 'com.google.gms.google-services'
