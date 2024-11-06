@@ -26,7 +26,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return BlocProvider<ThemeCubit>(
@@ -34,12 +33,6 @@ class _MyAppState extends State<MyApp> {
       child: BlocBuilder<ThemeCubit, bool>(
         builder: (context, state) {
           return GetMaterialApp(
-            // routes: {
-            //   loginId:(p0) => Login(),
-            //   changPassId:(p0) => ChangePass(),
-            //   signUpId:(p0) => Signup(),
-            //   nextSignup:(p0) => Next(),
-            // },
             translations: Translation(),
             locale: const Locale('en'),
             fallbackLocale: const Locale('en'),
